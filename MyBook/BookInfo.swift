@@ -31,7 +31,8 @@ class BookInfoWeb: BookInfo {
     
     init(_ newTitle: String, _ newWriter: String, _ newDesc: String, _ newCover: UIImage?, _ newURL:String) {
         bookURL = newURL
-        super.init("EMPTY_TITLE", "EMPTY_WRITER", "EMPTY_DESCRIPTION", nil)
+        super.init(newTitle, newWriter, newDesc, newCover)
     }
+    
     
 }

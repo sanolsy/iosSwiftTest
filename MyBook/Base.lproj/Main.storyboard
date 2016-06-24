@@ -99,7 +99,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="AWy-wi-oF2"/>
+                    <navigationItem key="navigationItem" title="Title" id="AWy-wi-oF2">
+                        <barButtonItem key="rightBarButtonItem" title="교보문고" id="xyz-PF-WLL">
+                            <connections>
+                                <segue destination="dLw-DG-ktu" kind="show" id="zhZ-MV-cK2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookDesc" destination="6J6-OZ-zZj" id="wqs-sv-J2j"/>
                         <outlet property="bookTitle" destination="Xzi-dR-myz" id="vw1-8x-bpU"/>
@@ -110,6 +116,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaU-P5-pqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1882" y="240"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="0P0-We-xd8">
+            <objects>
+                <viewController id="dLw-DG-ktu" customClass="WebViewController" customModule="MyBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bjh-cE-Zt7"/>
+                        <viewControllerLayoutGuide type="bottom" id="E7q-XI-Zxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rea-6a-AOC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvK-1m-wgW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Fde-Pv-VNA"/>
+                    <connections>
+                        <outlet property="bookWebView" destination="qvK-1m-wgW" id="vMh-nQ-bxy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRX-b4-CG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="240"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FZU-hR-nV5">

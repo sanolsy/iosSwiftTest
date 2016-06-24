@@ -15,7 +15,7 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var bookWriter: UILabel!
     @IBOutlet weak var bookDesc: UITextView!
     
-    var book:BookInfo?
+    var book:BookInfoWeb?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +38,19 @@ class BookDetailViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let urlVC = segue.destinationViewController as? WebViewController
+        
+        if let vc = urlVC {
+            vc.bookURL = book?.bookURL
+        }
     }
-    */
+
 
 }
